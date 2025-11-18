@@ -39,16 +39,17 @@ function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Let’s work together</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Let’s work together</h2>
+        <p className="text-blue-200/80 mb-8">Tell me about your project — I’ll get back within 1–2 business days.</p>
         <form onSubmit={handleSubmit} className="grid gap-4 bg-white/5 border border-white/10 backdrop-blur rounded-2xl p-6">
           <div className="grid md:grid-cols-2 gap-4">
-            <input name="name" required placeholder="Your name" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <input name="email" type="email" required placeholder="Your email" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <input name="name" required placeholder="Your name" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+            <input name="email" type="email" required placeholder="Your email" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
           </div>
-          <input name="subject" placeholder="Subject (optional)" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <textarea name="message" required rows="5" placeholder="Your message" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input name="subject" placeholder="Subject (optional)" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+          <textarea name="message" required rows="5" placeholder="Your message" className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-blue-200/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
           <div className="flex items-center gap-3">
-            <button disabled={loading} className="px-5 py-3 rounded-xl bg-blue-500 text-white font-semibold disabled:opacity-60">
+            <button disabled={loading} className="px-5 py-3 rounded-xl bg-gradient-to-br from-fuchsia-500 to-blue-500 text-white font-semibold disabled:opacity-60">
               {loading ? 'Sending...' : 'Send Message'}
             </button>
             {status && (
